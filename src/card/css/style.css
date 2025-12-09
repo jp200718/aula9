@@ -1,0 +1,139 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+/* a ia que fez o import abaixo */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap');
+
+
+body {
+  font-family: 'Red Hat Text', sans-serif;
+  background-color:  hsl(20, 50%, 98%);
+  padding: 2rem 1rem;
+}
+
+#cards {
+  display: grid;
+  /* pedi ajuda para ia  */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* pedi para ia */
+.card .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: hsl(14, 65%, 9%);
+  border:1px solid hsl(0, 0%, 24%);
+  padding: 0.75rem;
+  width: 50%;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: -1.75rem auto 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.card .btn:before {
+  content: '';
+  display: block;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDIxIDIwIj48ZyBmaWxsPSIjQzczQjBGIiBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGQ9Ik02LjU4MyAxOC43NWExLjI1IDEuMjUgMCAxIDAgMC0yLjUgMS4yNSAxLjI1IDAgMCAwIDAgMi41Wk0xNS4zMzQgMTguNzVhMS4yNSAxLjI1IDAgMSAwIDAtMi41IDEuMjUgMS4yNSAwIDAgMCAwIDIuNVpNMy40NDYgMS43NTJhLjYyNS42MjUgMCAwIDAtLjYxMy0uNTAyaC0yLjVWMi41aDEuOTg4bDIuNCAxMS45OThhLjYyNS42MjUgMCAwIDAgLjYxMi41MDJoMTEuMjV2LTEuMjVINS44NDdsLS41LTIuNWgxMS4yMzhhLjYyNS42MjUgMCAwIDAgLjYxLS40OWwxLjQxNy02LjM4NWgtMS4yOEwxNi4wODMgMTBINS4wOTZsLTEuNjUtOC4yNDhaIi8+PHBhdGggZD0iTTExLjU4NCAzLjc1di0yLjVoLTEuMjV2Mi41aC0yLjVWNWgyLjV2Mi41aDEuMjVWNWgyLjVWMy43NWgtMi41WiIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0uMzMzIDBoMjB2MjBoLTIweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.card .btn:hover {
+  color: hsl(14, 86%, 42%);
+  border-color: hsl(14, 86%, 42%);
+}
+.card .btn:active,
+.card .btn.add {
+  background-color: hsl(14, 86%, 42%);
+  color: white;
+  border-color: hsl(14, 86%, 42%);
+}
+
+
+.category {
+  color:  hsl(7, 20%, 60%);
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.card figcaption {
+  color: hsl(14, 65%, 9%);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.price {
+  color: hsl(14, 86%, 42%);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+@media (max-width: 550px) {
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  #cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .card button {
+    padding: 0.5rem;
+    font-size: 13px;
+  }
+
+  .category {
+    font-size: 13px;
+  }
+
+  .card figcaption {
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+}
